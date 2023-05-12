@@ -1,0 +1,28 @@
+{
+  "name": "donatorm/ud07",
+  "description": "UD 7. Aplicaciones web dinámicas: PHP y Javascript.",
+  "type": "project",
+  "require": {
+    "philo/laravel-blade": "^3.1",
+    "fortawesome/font-awesome": "^6.4"
+  },
+  "require-dev": {
+    "scssphp/scssphp": "^1.11",
+    "twbs/bootstrap": "^5.2"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Donatorm\\Ud07\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "DonatoRM",
+      "email": "donatoramos@hotmail.com"
+    }
+  ],
+  "config": {
+    "optimize-autoloader": true
+  }
+}
