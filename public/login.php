@@ -1,5 +1,6 @@
 <?php
 require_once '../vendor/autoload.php';
+require_once '../xajax/xajax_core/xajax.inc.php';
 
 use Philo\Blade\Blade;
 
