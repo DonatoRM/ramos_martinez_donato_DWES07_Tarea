@@ -4,7 +4,8 @@
   "type": "project",
   "require": {
     "philo/laravel-blade": "^3.1",
-    "fortawesome/font-awesome": "^6.4"
+    "fortawesome/font-awesome": "^6.4",
+    "xajax/xajax": "dev-master"
   },
   "require-dev": {
     "scssphp/scssphp": "^1.11",
@@ -21,8 +22,5 @@
       "name": "DonatoRM",
       "email": "donatoramos@hotmail.com"
     }
-  ],
-  "config": {
-    "optimize-autoloader": true
-  }
+  ]
 }

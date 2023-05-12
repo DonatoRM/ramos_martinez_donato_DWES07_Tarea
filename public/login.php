@@ -1,12 +1,12 @@
 <?php
 require_once '../vendor/autoload.php';
-require_once '../xajax/xajax_core/xajax.inc.php';
+session_start();
 
 use Philo\Blade\Blade;
 use Donatorm\Ud07\UsersDB;
 
 $xajax = new xajax();
-$xajax->configure('javascript URI', 'xajax/');
+$xajax->configure('javascript URI', '../vendor/xajax/xajax');
 $xajax->configure('debug', true);
 function validateFormLogin($user, $pass)
 {
