@@ -4,6 +4,10 @@
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('scripts'); ?>
     <script type="text/javascript" src="../vendor/fortawesome/font-awesome/js/all.min.js"></script>
+    <?php
+        $xajax->printJavascript();
+    ?>
+    <script type="text/javascript" src="../js/login.js"></script>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
     <main>
@@ -14,15 +18,21 @@
                 </div>
                 <div class="card-body">
                     <form name="formLogin" id="formLogin" method="POST" action="votes.php" target="_self">
-                        <div class="input-group mb-3">
-                            <label for="user" class="input-group-text"><i class="fa-solid fa-user"></i></label>
-                            <input type="text" class="form-control" name="user" id="user" size="25"
-                                placeholder="Usuarios" required>
+                        <div class="">
+                            <span id="errorUser" class=""></span>
+                            <div class="input-group mb-3">
+                                <label for="user" class="input-group-text"><i class="fa-solid fa-user"></i></label>
+                                <input type="text" class="form-control" name="user" id="user" size="25"
+                                    placeholder="Usuarios" required>
+                            </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <label for="pass" class="input-group-text"><i class="fa-solid fa-key"></i></label>
-                            <input type="password" class="form-control" name="pass" id="pass" size="25"
-                                placeholder="Contraseña" required>
+                        <div class="">
+                            <span id="errorPass" class=""></span>
+                            <div class="input-group mb-3">
+                                <label for="pass" class="input-group-text"><i class="fa-solid fa-key"></i></label>
+                                <input type="password" class="form-control" name="pass" id="pass" size="25"
+                                    placeholder="Contraseña" required>
+                            </div>
                         </div>
                         <div class="">
                             <button type="submit" class="btn btn-azul text-white float-end" name="register"

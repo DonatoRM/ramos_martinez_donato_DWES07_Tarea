@@ -10,6 +10,13 @@ class UsersDB extends ConnectionDB
     {
         parent::__construct();
     }
+    /**
+     * Método que indica si el usuario está registrado en la BD
+     *
+     * @param string $user Usuario
+     * @param string $pass Contraseña
+     * @return boolean Devuelve TRUE si está registrado, y FALSE si no lo está
+     */
     public function validateUserDB(string $user, string $pass): bool
     {
         $hashPass = hash('sha256', $pass);
