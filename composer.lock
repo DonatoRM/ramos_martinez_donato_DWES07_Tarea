@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f38f3940cc6474c58373a027f7166a99",
+    "content-hash": "33460b98031bc31963f58572343a6717",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1301,66 +1301,6 @@
                 }
             ],
             "time": "2022-06-27T16:58:25+00:00"
-        },
-        {
-            "name": "xajax/xajax",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Xajax/Xajax.git",
-                "reference": "49ea682f4dffbda7a2984e7d07450207d233ad7c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Xajax/Xajax/zipball/49ea682f4dffbda7a2984e7d07450207d233ad7c",
-                "reference": "49ea682f4dffbda7a2984e7d07450207d233ad7c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "xajax_core/xajax.inc.php"
-                ],
-                "psr-0": {
-                    "": "xajax_core/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jared White"
-                },
-                {
-                    "name": "J. Max Wilson"
-                },
-                {
-                    "name": "Joseph Woolley"
-                },
-                {
-                    "name": "Steffen Konerow"
-                }
-            ],
-            "description": "Xajax is an open source PHP class library for easily creating powerful PHP-driven, web-based Ajax Applications. Using Xajax, you can asynchronously call PHP functions and update the content of your your webpage without reloading the page.",
-            "homepage": "http://xajaxproject.org",
-            "keywords": [
-                "asynchronous",
-                "php",
-                "xajax"
-            ],
-            "support": {
-                "forum": "http://community.xajax-project.org",
-                "irc": "irc://irc.freenode.org/xajax",
-                "issues": "https://github.com/Xajax/Xajax/issues",
-                "source": "https://github.com/Xajax/Xajax"
-            },
-            "time": "2014-10-22T16:40:16+00:00"
         }
     ],
     "packages-dev": [
@@ -1497,9 +1437,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "xajax/xajax": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

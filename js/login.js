@@ -6,11 +6,11 @@ document.addEventListener(
       "submit",
       (evento) => {
         evento.preventDefault();
-        const $user = document.getElementById("user").value;
-        const $pass = document.getElementById("pass").value;
+        const user = document.getElementById("user").value;
+        const pass = document.getElementById("pass").value;
         const response = xajax.request(
           { xjxfun: "validateFormLogin" },
-          { mode: "synchronous", parameters: ["user", "pass"] }
+          { mode: "synchronous", parameters: [user, pass] }
         );
         if (response) {
           document.getElementById("formLogin").submit();

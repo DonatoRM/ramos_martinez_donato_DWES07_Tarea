@@ -1,13 +1,14 @@
 <?php
 require_once '../vendor/autoload.php';
+require_once '../vendor/xajax/xajax_core/xajax.inc.php';
 session_start();
 
 use Philo\Blade\Blade;
 use Donatorm\Ud07\UsersDB;
 
 $xajax = new xajax();
-$xajax->configure('javascript URI', '../vendor/xajax/xajax');
-$xajax->configure('debug', true);
+$xajax->configure('javascript URI', '../vendor/xajax');
+// $xajax->configure('debug', true);
 function validateFormLogin($user, $pass)
 {
     $errorUser = false;
@@ -22,7 +23,7 @@ function validateFormLogin($user, $pass)
     if (strlen($pass) === 0) {
         $errorPass = true;
     }
-    if (!$errorUser && !$errorPass) {
+    if ($errorUser === false && $errorPass === false) {
         $objUserDB = new UsersDB();
         $valid = $objUserDB->validateUserDB($user, $pass);
     }
