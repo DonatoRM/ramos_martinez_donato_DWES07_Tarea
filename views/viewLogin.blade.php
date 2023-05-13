@@ -23,7 +23,7 @@
                             <div class="input-group mb-3">
                                 <label for="user" class="input-group-text"><i class="fa-solid fa-user"></i></label>
                                 <input type="text" class="form-control" name="user" id="user" size="25"
-                                    placeholder="Usuarios" required>
+                                    placeholder="Usuarios">
                             </div>
                         </div>
                         <div class="">
@@ -31,12 +31,22 @@
                             <div class="input-group mb-3">
                                 <label for="pass" class="input-group-text"><i class="fa-solid fa-key"></i></label>
                                 <input type="password" class="form-control" name="pass" id="pass" size="25"
-                                    placeholder="Contraseña" required>
+                                    placeholder="Contraseña">
                             </div>
                         </div>
                         <div class="">
-                            <button type="submit" class="btn btn-azul text-white float-end" name="register"
-                                id="register">Registrar</button>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div id="errorDB" class="">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-azul text-white float-end" name="register"
+                                            id="register">Registrar</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>

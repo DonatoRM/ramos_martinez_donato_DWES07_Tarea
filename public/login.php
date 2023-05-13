@@ -23,23 +23,28 @@ function validateFormLogin($user, $pass)
     if (strlen($pass) === 0) {
         $errorPass = true;
     }
-    if ($errorUser === false && $errorPass === false) {
-        $objUserDB = new UsersDB();
-        $valid = $objUserDB->validateUserDB($user, $pass);
-    }
     if ($errorUser) {
-        $response->assign('errorUser', 'innerHTML', 'Formato de Usuario incorrecto');
+        $response->assign('errorUser', 'innerHTML', '<p class="d-flex justify-content-center align-items-center rounded bg-danger text-white mb-0">Formato de Usuario incorrecto</p>');
         $response->assign('errorUser', 'class', 'bg-danger text-white rounded');
     } else {
         $response->clear('errorUser', 'innerHTML');
         $response->clear('errorUser', 'class');
     }
     if ($errorPass) {
-        $response->assign('errorPass', 'innerHTML', 'Formato de Contraseña incorrecto');
+        $response->assign('errorPass', 'innerHTML', '<p class="d-flex justify-content-center align-items-center rounded bg-danger text-white mb-0">Formato de Contraseña incorrecto</p>');
         $response->assign('errorPass', 'class', 'bg-danger text-white rounded');
     } else {
         $response->clear('errorPass', 'innerHTML');
         $response->clear('errorPass', 'class');
+    }
+    if ($errorUser === false && $errorPass === false) {
+        $objUserDB = new UsersDB();
+        $valid = $objUserDB->validateUserDB($user, $pass);
+    }
+    if (!$valid) {
+        $response->assign('errorDB', 'innerHTML', '<p class="d-flex justify-content-center align-items-center w-100 h-100 rounded bg-danger text-white mt-1">Usuario incorrecto</p>');
+    } else {
+        $response->clear('errorDB', 'innerHTML');
     }
     $response->setReturnValue($valid);
     return $response;

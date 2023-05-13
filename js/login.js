@@ -14,10 +14,8 @@ document.addEventListener(
         );
         if (response) {
           document.getElementById("formLogin").submit();
-          return true;
-        } else {
-          return false;
         }
+        return response;
       },
       false
     );
