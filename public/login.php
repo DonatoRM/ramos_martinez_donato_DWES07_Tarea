@@ -44,6 +44,7 @@ function validateFormLogin($user, $pass)
     if (!$valid) {
         $response->assign('errorDB', 'innerHTML', '<p class="d-flex justify-content-center align-items-center w-100 h-100 rounded bg-danger text-white mt-1">Usuario incorrecto</p>');
     } else {
+        $_SESSION['user'] = $user;
         $response->clear('errorDB', 'innerHTML');
     }
     $response->setReturnValue($valid);
