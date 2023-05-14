@@ -17,7 +17,7 @@
                     <h2 class="card-title mt-1"><i class="fa-solid fa-gear me-3"></i>Registro</h2>
                 </div>
                 <div class="card-body">
-                    <form name="formLogin" id="formLogin" method="POST" action="votes.php" target="_self">
+                    <form name="formLogin" id="formLogin" method="POST" action="listing.php" target="_self">
                         <div class="">
                             <span id="errorUser" class=""></span>
                             <div class="input-group mb-3">

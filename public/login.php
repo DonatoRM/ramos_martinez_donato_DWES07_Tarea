@@ -8,7 +8,7 @@ use Donatorm\Ud07\UsersDB;
 
 $xajax = new xajax();
 $xajax->configure('javascript URI', '../xajax');
-// $xajax->configure('debug', true);
+$xajax->configure('debug', true);
 function validateFormLogin($user, $pass)
 {
     $errorUser = false;
@@ -26,6 +26,7 @@ function validateFormLogin($user, $pass)
     if ($errorUser) {
         $response->assign('errorUser', 'innerHTML', '<p class="d-flex justify-content-center align-items-center rounded bg-danger text-white mb-0">Formato de Usuario incorrecto</p>');
         $response->assign('errorUser', 'class', 'bg-danger text-white rounded');
+        $response->assign('errorBD', 'innerHTML', '');
     } else {
         $response->clear('errorUser', 'innerHTML');
         $response->clear('errorUser', 'class');
@@ -33,6 +34,7 @@ function validateFormLogin($user, $pass)
     if ($errorPass) {
         $response->assign('errorPass', 'innerHTML', '<p class="d-flex justify-content-center align-items-center rounded bg-danger text-white mb-0">Formato de Contraseña incorrecto</p>');
         $response->assign('errorPass', 'class', 'bg-danger text-white rounded');
+        $response->assign('errorBD', 'innerHTML', '');
     } else {
         $response->clear('errorPass', 'innerHTML');
         $response->clear('errorPass', 'class');
@@ -41,7 +43,7 @@ function validateFormLogin($user, $pass)
         $objUserDB = new UsersDB();
         $valid = $objUserDB->validateUserDB($user, $pass);
     }
-    if (!$valid) {
+    if (!$valid && !($errorUser || $errorPass)) {
         $response->assign('errorDB', 'innerHTML', '<p class="d-flex justify-content-center align-items-center w-100 h-100 rounded bg-danger text-white mt-1">Usuario incorrecto</p>');
     } else {
         $_SESSION['user'] = $user;
