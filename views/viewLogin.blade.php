@@ -19,7 +19,9 @@
                 <div class="card-body">
                     <form name="formLogin" id="formLogin" method="POST" action="listing.php" target="_self">
                         <div class="">
-                            <span id="errorUser" class=""></span>
+                            <span id="errorUser"
+                                class="d-flex justify-content-center align-items-center rounded
+                                bg-danger text-white mb-0"></span>
                             <div class="input-group mb-3">
                                 <label for="user" class="input-group-text"><i class="fa-solid fa-user"></i></label>
                                 <input type="text" class="form-control" name="user" id="user" size="25"
@@ -27,7 +29,8 @@
                             </div>
                         </div>
                         <div class="">
-                            <span id="errorPass" class=""></span>
+                            <span id="errorPass"
+                                class="d-flex justify-content-center align-items-center rounded bg-danger text-white mb-0"></span>
                             <div class="input-group mb-3">
                                 <label for="pass" class="input-group-text"><i class="fa-solid fa-key"></i></label>
                                 <input type="password" class="form-control" name="pass" id="pass" size="25"
@@ -37,8 +40,9 @@
                         <div class="">
                             <div class="row">
                                 <div class="col-8">
-                                    <div id="errorDB" class="">
-                                    </div>
+                                    <span id="errorDB"
+                                        class="d-flex justify-content-center align-items-center rounded bg-danger text-white mt-1">
+                                    </span>
                                 </div>
                                 <div class="col-4">
                                     <div class="d-flex justify-content-end">

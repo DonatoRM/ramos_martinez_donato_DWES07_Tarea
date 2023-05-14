@@ -1,6 +1,11 @@
 document.addEventListener(
   "DOMContentLoaded",
   () => {
+    const buttons = document.querySelectorAll("table button");
+    buttons.forEach((selectedButton) => {
+      const cod = selectedButton.value;
+      xajax_pintarEstrellas(cod);
+    });
     document.getElementById("table").addEventListener(
       "click",
       (evento) => {
@@ -14,7 +19,6 @@ document.addEventListener(
           if (responseVote) {
             alert("Ya has votado ese producto !!!");
           }
-          console.log(cod);
           xajax_pintarEstrellas(cod);
         }
       },
